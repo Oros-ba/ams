@@ -5,7 +5,7 @@
 	<name>A M S</name>
 	<summary>Audit Management System (AMS)</summary>
 	<description>Audit Management System (AMS) covers all key audit processes such as audit planning, implementation of audit activities (financial audit, compliance audit, performance audit), monitoring of the implementation of audit recommendations, etc.</description>
-	<version>1.0.1</version>
+	<version>1.0.2</version>
 	<licence>agpl</licence>
 	<author mail="mirza.abazovic@safenet.ba" homepage="https://www.safenet.ba/">Mirza Abazovic</author>
 	<namespace>AMS</namespace>

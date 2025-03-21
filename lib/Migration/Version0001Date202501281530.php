@@ -10,7 +10,7 @@ use OCP\DB\Types;
 use OCP\Migration\IOutput;
 use OCP\Migration\SimpleMigrationStep;
 
-class Version0001Date202501281030 extends SimpleMigrationStep {
+class Version0001Date202501281530 extends SimpleMigrationStep {
 
 	/**
 	 * @param IOutput $output
@@ -57,9 +57,10 @@ class Version0001Date202501281030 extends SimpleMigrationStep {
 		// Create audit_subject table for many-to-many relationship
 		if (!$schema->hasTable('ams_audit_subject')) {
 			$table = $schema->createTable('ams_audit_subject');
+			$table->addColumn('id', Types::INTEGER, ['autoincrement' => true, 'notnull' => true]);
 			$table->addColumn('audit_id', Types::INTEGER, ['notnull' => true]);
 			$table->addColumn('subject_id', Types::INTEGER, ['notnull' => true]);
-			$table->setPrimaryKey(['audit_id', 'subject_id']);
+			$table->setPrimaryKey(['id']);
 			$table->addForeignKeyConstraint('ams_audit', ['audit_id'], ['id']);
 			$table->addForeignKeyConstraint('ams_subject', ['subject_id'], ['id']);
 		}
